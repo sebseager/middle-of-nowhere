@@ -14,6 +14,7 @@ export const CITIES: City[] = [
     lat: 33.5186,
     lng: -86.8104,
   },
+
   {
     city: "Montgomery",
     state: "Alabama",
@@ -21,20 +22,21 @@ export const CITIES: City[] = [
     lat: 32.3668,
     lng: -86.3,
   },
-  { city: "Mobile", state: "Alabama", abbr: "AL", lat: 30.6954, lng: -88.0399 },
+
+  {
+    city: "Mobile",
+    state: "Alabama",
+    abbr: "AL",
+    lat: 30.6954,
+    lng: -88.0399,
+  },
+
   {
     city: "Huntsville",
     state: "Alabama",
     abbr: "AL",
     lat: 34.7304,
     lng: -86.5861,
-  },
-  {
-    city: "Tuscaloosa",
-    state: "Alabama",
-    abbr: "AL",
-    lat: 33.2098,
-    lng: -87.5692,
   },
 
   {
@@ -44,22 +46,6 @@ export const CITIES: City[] = [
     lat: 61.2181,
     lng: -149.9003,
   },
-  {
-    city: "Fairbanks",
-    state: "Alaska",
-    abbr: "AK",
-    lat: 64.8378,
-    lng: -147.7164,
-  },
-  { city: "Juneau", state: "Alaska", abbr: "AK", lat: 58.3019, lng: -134.4197 },
-  {
-    city: "Wasilla",
-    state: "Alaska",
-    abbr: "AK",
-    lat: 61.5809,
-    lng: -149.4411,
-  },
-  { city: "Sitka", state: "Alaska", abbr: "AK", lat: 57.0531, lng: -135.33 },
 
   {
     city: "Phoenix",
@@ -68,6 +54,7 @@ export const CITIES: City[] = [
     lat: 33.4484,
     lng: -112.074,
   },
+
   {
     city: "Tucson",
     state: "Arizona",
@@ -75,20 +62,21 @@ export const CITIES: City[] = [
     lat: 32.2226,
     lng: -110.9747,
   },
-  { city: "Mesa", state: "Arizona", abbr: "AZ", lat: 33.4152, lng: -111.8315 },
+
+  {
+    city: "Mesa",
+    state: "Arizona",
+    abbr: "AZ",
+    lat: 33.4152,
+    lng: -111.8315,
+  },
+
   {
     city: "Scottsdale",
     state: "Arizona",
     abbr: "AZ",
     lat: 33.4942,
     lng: -111.9261,
-  },
-  {
-    city: "Flagstaff",
-    state: "Arizona",
-    abbr: "AZ",
-    lat: 35.1983,
-    lng: -111.6513,
   },
 
   {
@@ -98,34 +86,6 @@ export const CITIES: City[] = [
     lat: 34.7465,
     lng: -92.2896,
   },
-  {
-    city: "Fayetteville",
-    state: "Arkansas",
-    abbr: "AR",
-    lat: 36.0626,
-    lng: -94.1574,
-  },
-  {
-    city: "Fort Smith",
-    state: "Arkansas",
-    abbr: "AR",
-    lat: 35.3859,
-    lng: -94.3985,
-  },
-  {
-    city: "Springdale",
-    state: "Arkansas",
-    abbr: "AR",
-    lat: 36.1867,
-    lng: -94.1288,
-  },
-  {
-    city: "Jonesboro",
-    state: "Arkansas",
-    abbr: "AR",
-    lat: 35.8423,
-    lng: -90.7043,
-  },
 
   {
     city: "Los Angeles",
@@ -134,6 +94,7 @@ export const CITIES: City[] = [
     lat: 34.0522,
     lng: -118.2437,
   },
+
   {
     city: "San Diego",
     state: "California",
@@ -141,6 +102,7 @@ export const CITIES: City[] = [
     lat: 32.7157,
     lng: -117.1611,
   },
+
   {
     city: "San Jose",
     state: "California",
@@ -148,6 +110,7 @@ export const CITIES: City[] = [
     lat: 37.3382,
     lng: -121.8863,
   },
+
   {
     city: "San Francisco",
     state: "California",
@@ -155,6 +118,7 @@ export const CITIES: City[] = [
     lat: 37.7749,
     lng: -122.4194,
   },
+
   {
     city: "Fresno",
     state: "California",
@@ -170,6 +134,7 @@ export const CITIES: City[] = [
     lat: 39.7392,
     lng: -104.9903,
   },
+
   {
     city: "Colorado Springs",
     state: "Colorado",
@@ -177,6 +142,7 @@ export const CITIES: City[] = [
     lat: 38.8339,
     lng: -104.8214,
   },
+
   {
     city: "Aurora",
     state: "Colorado",
@@ -184,6 +150,7 @@ export const CITIES: City[] = [
     lat: 39.7294,
     lng: -104.8319,
   },
+
   {
     city: "Fort Collins",
     state: "Colorado",
@@ -191,6 +158,7 @@ export const CITIES: City[] = [
     lat: 40.5853,
     lng: -105.0844,
   },
+
   {
     city: "Boulder",
     state: "Colorado",
@@ -206,6 +174,7 @@ export const CITIES: City[] = [
     lat: 41.1865,
     lng: -73.1952,
   },
+
   {
     city: "New Haven",
     state: "Connecticut",
@@ -213,6 +182,7 @@ export const CITIES: City[] = [
     lat: 41.3083,
     lng: -72.9279,
   },
+
   {
     city: "Hartford",
     state: "Connecticut",
@@ -220,6 +190,7 @@ export const CITIES: City[] = [
     lat: 41.7658,
     lng: -72.6734,
   },
+
   {
     city: "Stamford",
     state: "Connecticut",
@@ -227,6 +198,7 @@ export const CITIES: City[] = [
     lat: 41.0534,
     lng: -73.5387,
   },
+
   {
     city: "Waterbury",
     state: "Connecticut",
@@ -236,44 +208,29 @@ export const CITIES: City[] = [
   },
 
   {
-    city: "Wilmington",
-    state: "Delaware",
-    abbr: "DE",
-    lat: 39.7391,
-    lng: -75.5398,
-  },
-  { city: "Dover", state: "Delaware", abbr: "DE", lat: 39.1582, lng: -75.5244 },
-  {
-    city: "Newark",
-    state: "Delaware",
-    abbr: "DE",
-    lat: 39.6837,
-    lng: -75.7497,
-  },
-  {
-    city: "Middletown",
-    state: "Delaware",
-    abbr: "DE",
-    lat: 39.4496,
-    lng: -75.7163,
-  },
-  {
-    city: "Smyrna",
-    state: "Delaware",
-    abbr: "DE",
-    lat: 39.2998,
-    lng: -75.6046,
-  },
-
-  {
     city: "Jacksonville",
     state: "Florida",
     abbr: "FL",
     lat: 30.3322,
     lng: -81.6557,
   },
-  { city: "Miami", state: "Florida", abbr: "FL", lat: 25.7617, lng: -80.1918 },
-  { city: "Tampa", state: "Florida", abbr: "FL", lat: 27.9506, lng: -82.4572 },
+
+  {
+    city: "Miami",
+    state: "Florida",
+    abbr: "FL",
+    lat: 25.7617,
+    lng: -80.1918,
+  },
+
+  {
+    city: "Tampa",
+    state: "Florida",
+    abbr: "FL",
+    lat: 27.9506,
+    lng: -82.4572,
+  },
+
   {
     city: "Orlando",
     state: "Florida",
@@ -281,6 +238,7 @@ export const CITIES: City[] = [
     lat: 28.5383,
     lng: -81.3792,
   },
+
   {
     city: "Tallahassee",
     state: "Florida",
@@ -289,7 +247,14 @@ export const CITIES: City[] = [
     lng: -84.2807,
   },
 
-  { city: "Atlanta", state: "Georgia", abbr: "GA", lat: 33.749, lng: -84.388 },
+  {
+    city: "Atlanta",
+    state: "Georgia",
+    abbr: "GA",
+    lat: 33.749,
+    lng: -84.388,
+  },
+
   {
     city: "Augusta",
     state: "Georgia",
@@ -297,6 +262,7 @@ export const CITIES: City[] = [
     lat: 33.4735,
     lng: -82.0105,
   },
+
   {
     city: "Columbus",
     state: "Georgia",
@@ -304,6 +270,7 @@ export const CITIES: City[] = [
     lat: 32.4609,
     lng: -84.9877,
   },
+
   {
     city: "Savannah",
     state: "Georgia",
@@ -311,7 +278,14 @@ export const CITIES: City[] = [
     lat: 32.0809,
     lng: -81.0912,
   },
-  { city: "Athens", state: "Georgia", abbr: "GA", lat: 33.9519, lng: -83.3576 },
+
+  {
+    city: "Athens",
+    state: "Georgia",
+    abbr: "GA",
+    lat: 33.9519,
+    lng: -83.3576,
+  },
 
   {
     city: "Honolulu",
@@ -320,24 +294,15 @@ export const CITIES: City[] = [
     lat: 21.3069,
     lng: -157.8583,
   },
-  { city: "Hilo", state: "Hawaii", abbr: "HI", lat: 19.707, lng: -155.0885 },
-  { city: "Kailua", state: "Hawaii", abbr: "HI", lat: 21.4022, lng: -157.7394 },
+
   {
-    city: "Pearl City",
-    state: "Hawaii",
-    abbr: "HI",
-    lat: 21.3972,
-    lng: -157.9752,
-  },
-  {
-    city: "Kahului",
-    state: "Hawaii",
-    abbr: "HI",
-    lat: 20.8893,
-    lng: -156.4729,
+    city: "Boise",
+    state: "Idaho",
+    abbr: "ID",
+    lat: 43.615,
+    lng: -116.2023,
   },
 
-  { city: "Boise", state: "Idaho", abbr: "ID", lat: 43.615, lng: -116.2023 },
   {
     city: "Meridian",
     state: "Idaho",
@@ -345,20 +310,13 @@ export const CITIES: City[] = [
     lat: 43.6121,
     lng: -116.3915,
   },
-  { city: "Nampa", state: "Idaho", abbr: "ID", lat: 43.5407, lng: -116.5635 },
+
   {
-    city: "Idaho Falls",
+    city: "Nampa",
     state: "Idaho",
     abbr: "ID",
-    lat: 43.4917,
-    lng: -112.0339,
-  },
-  {
-    city: "Pocatello",
-    state: "Idaho",
-    abbr: "ID",
-    lat: 42.8713,
-    lng: -112.4455,
+    lat: 43.5407,
+    lng: -116.5635,
   },
 
   {
@@ -368,6 +326,7 @@ export const CITIES: City[] = [
     lat: 41.8781,
     lng: -87.6298,
   },
+
   {
     city: "Aurora",
     state: "Illinois",
@@ -375,6 +334,7 @@ export const CITIES: City[] = [
     lat: 41.7606,
     lng: -88.3201,
   },
+
   {
     city: "Naperville",
     state: "Illinois",
@@ -382,6 +342,7 @@ export const CITIES: City[] = [
     lat: 41.7508,
     lng: -88.1535,
   },
+
   {
     city: "Rockford",
     state: "Illinois",
@@ -389,6 +350,7 @@ export const CITIES: City[] = [
     lat: 42.2711,
     lng: -89.094,
   },
+
   {
     city: "Springfield",
     state: "Illinois",
@@ -404,6 +366,7 @@ export const CITIES: City[] = [
     lat: 39.7684,
     lng: -86.1581,
   },
+
   {
     city: "Fort Wayne",
     state: "Indiana",
@@ -411,6 +374,7 @@ export const CITIES: City[] = [
     lat: 41.0793,
     lng: -85.1394,
   },
+
   {
     city: "Evansville",
     state: "Indiana",
@@ -418,6 +382,7 @@ export const CITIES: City[] = [
     lat: 37.9716,
     lng: -87.5711,
   },
+
   {
     city: "South Bend",
     state: "Indiana",
@@ -425,15 +390,15 @@ export const CITIES: City[] = [
     lat: 41.6764,
     lng: -86.252,
   },
+
   {
-    city: "Bloomington",
-    state: "Indiana",
-    abbr: "IN",
-    lat: 39.1653,
-    lng: -86.5264,
+    city: "Des Moines",
+    state: "Iowa",
+    abbr: "IA",
+    lat: 41.5868,
+    lng: -93.625,
   },
 
-  { city: "Des Moines", state: "Iowa", abbr: "IA", lat: 41.5868, lng: -93.625 },
   {
     city: "Cedar Rapids",
     state: "Iowa",
@@ -441,11 +406,23 @@ export const CITIES: City[] = [
     lat: 41.9779,
     lng: -91.6656,
   },
-  { city: "Davenport", state: "Iowa", abbr: "IA", lat: 41.5236, lng: -90.5776 },
-  { city: "Sioux City", state: "Iowa", abbr: "IA", lat: 42.499, lng: -96.4003 },
-  { city: "Iowa City", state: "Iowa", abbr: "IA", lat: 41.6611, lng: -91.5302 },
 
-  { city: "Wichita", state: "Kansas", abbr: "KS", lat: 37.6872, lng: -97.3301 },
+  {
+    city: "Davenport",
+    state: "Iowa",
+    abbr: "IA",
+    lat: 41.5236,
+    lng: -90.5776,
+  },
+
+  {
+    city: "Wichita",
+    state: "Kansas",
+    abbr: "KS",
+    lat: 37.6872,
+    lng: -97.3301,
+  },
+
   {
     city: "Overland Park",
     state: "Kansas",
@@ -453,6 +430,7 @@ export const CITIES: City[] = [
     lat: 38.9822,
     lng: -94.6708,
   },
+
   {
     city: "Kansas City",
     state: "Kansas",
@@ -460,13 +438,13 @@ export const CITIES: City[] = [
     lat: 39.1141,
     lng: -94.6275,
   },
-  { city: "Topeka", state: "Kansas", abbr: "KS", lat: 39.0558, lng: -95.689 },
+
   {
-    city: "Lawrence",
+    city: "Topeka",
     state: "Kansas",
     abbr: "KS",
-    lat: 38.9717,
-    lng: -95.2353,
+    lat: 39.0558,
+    lng: -95.689,
   },
 
   {
@@ -476,33 +454,13 @@ export const CITIES: City[] = [
     lat: 38.2527,
     lng: -85.7585,
   },
+
   {
     city: "Lexington",
     state: "Kentucky",
     abbr: "KY",
     lat: 38.0406,
     lng: -84.5037,
-  },
-  {
-    city: "Bowling Green",
-    state: "Kentucky",
-    abbr: "KY",
-    lat: 36.9685,
-    lng: -86.4808,
-  },
-  {
-    city: "Owensboro",
-    state: "Kentucky",
-    abbr: "KY",
-    lat: 37.7719,
-    lng: -87.1112,
-  },
-  {
-    city: "Covington",
-    state: "Kentucky",
-    abbr: "KY",
-    lat: 39.0837,
-    lng: -84.5086,
   },
 
   {
@@ -512,6 +470,7 @@ export const CITIES: City[] = [
     lat: 29.9511,
     lng: -90.0715,
   },
+
   {
     city: "Baton Rouge",
     state: "Louisiana",
@@ -519,6 +478,7 @@ export const CITIES: City[] = [
     lat: 30.4515,
     lng: -91.1871,
   },
+
   {
     city: "Shreveport",
     state: "Louisiana",
@@ -526,6 +486,7 @@ export const CITIES: City[] = [
     lat: 32.5252,
     lng: -93.7502,
   },
+
   {
     city: "Lafayette",
     state: "Louisiana",
@@ -533,25 +494,6 @@ export const CITIES: City[] = [
     lat: 30.2241,
     lng: -92.0198,
   },
-  {
-    city: "Lake Charles",
-    state: "Louisiana",
-    abbr: "LA",
-    lat: 30.2266,
-    lng: -93.2174,
-  },
-
-  { city: "Portland", state: "Maine", abbr: "ME", lat: 43.6591, lng: -70.2568 },
-  { city: "Lewiston", state: "Maine", abbr: "ME", lat: 44.1004, lng: -70.2148 },
-  { city: "Bangor", state: "Maine", abbr: "ME", lat: 44.8012, lng: -68.7778 },
-  {
-    city: "South Portland",
-    state: "Maine",
-    abbr: "ME",
-    lat: 43.6415,
-    lng: -70.2409,
-  },
-  { city: "Augusta", state: "Maine", abbr: "ME", lat: 44.3106, lng: -69.7795 },
 
   {
     city: "Baltimore",
@@ -559,34 +501,6 @@ export const CITIES: City[] = [
     abbr: "MD",
     lat: 39.2904,
     lng: -76.6122,
-  },
-  {
-    city: "Frederick",
-    state: "Maryland",
-    abbr: "MD",
-    lat: 39.4143,
-    lng: -77.4105,
-  },
-  {
-    city: "Rockville",
-    state: "Maryland",
-    abbr: "MD",
-    lat: 39.0839,
-    lng: -77.1528,
-  },
-  {
-    city: "Gaithersburg",
-    state: "Maryland",
-    abbr: "MD",
-    lat: 39.1434,
-    lng: -77.2014,
-  },
-  {
-    city: "Annapolis",
-    state: "Maryland",
-    abbr: "MD",
-    lat: 38.9784,
-    lng: -76.4922,
   },
 
   {
@@ -596,6 +510,7 @@ export const CITIES: City[] = [
     lat: 42.3601,
     lng: -71.0589,
   },
+
   {
     city: "Worcester",
     state: "Massachusetts",
@@ -603,6 +518,7 @@ export const CITIES: City[] = [
     lat: 42.2626,
     lng: -71.8023,
   },
+
   {
     city: "Springfield",
     state: "Massachusetts",
@@ -610,6 +526,7 @@ export const CITIES: City[] = [
     lat: 42.1015,
     lng: -72.5898,
   },
+
   {
     city: "Cambridge",
     state: "Massachusetts",
@@ -617,6 +534,7 @@ export const CITIES: City[] = [
     lat: 42.3736,
     lng: -71.1097,
   },
+
   {
     city: "Lowell",
     state: "Massachusetts",
@@ -632,6 +550,7 @@ export const CITIES: City[] = [
     lat: 42.3314,
     lng: -83.0458,
   },
+
   {
     city: "Grand Rapids",
     state: "Michigan",
@@ -639,6 +558,7 @@ export const CITIES: City[] = [
     lat: 42.9634,
     lng: -85.6681,
   },
+
   {
     city: "Warren",
     state: "Michigan",
@@ -646,6 +566,7 @@ export const CITIES: City[] = [
     lat: 42.5145,
     lng: -83.0147,
   },
+
   {
     city: "Sterling Heights",
     state: "Michigan",
@@ -653,6 +574,7 @@ export const CITIES: City[] = [
     lat: 42.5803,
     lng: -83.0302,
   },
+
   {
     city: "Ann Arbor",
     state: "Michigan",
@@ -668,6 +590,7 @@ export const CITIES: City[] = [
     lat: 44.9778,
     lng: -93.265,
   },
+
   {
     city: "Saint Paul",
     state: "Minnesota",
@@ -675,26 +598,13 @@ export const CITIES: City[] = [
     lat: 44.9537,
     lng: -93.09,
   },
+
   {
     city: "Rochester",
     state: "Minnesota",
     abbr: "MN",
     lat: 44.0121,
     lng: -92.4802,
-  },
-  {
-    city: "Duluth",
-    state: "Minnesota",
-    abbr: "MN",
-    lat: 46.7867,
-    lng: -92.1005,
-  },
-  {
-    city: "Bloomington",
-    state: "Minnesota",
-    abbr: "MN",
-    lat: 44.8408,
-    lng: -93.2983,
   },
 
   {
@@ -704,34 +614,6 @@ export const CITIES: City[] = [
     lat: 32.2988,
     lng: -90.1848,
   },
-  {
-    city: "Gulfport",
-    state: "Mississippi",
-    abbr: "MS",
-    lat: 30.3674,
-    lng: -89.0928,
-  },
-  {
-    city: "Southaven",
-    state: "Mississippi",
-    abbr: "MS",
-    lat: 34.9889,
-    lng: -90.0126,
-  },
-  {
-    city: "Hattiesburg",
-    state: "Mississippi",
-    abbr: "MS",
-    lat: 31.3271,
-    lng: -89.2903,
-  },
-  {
-    city: "Biloxi",
-    state: "Mississippi",
-    abbr: "MS",
-    lat: 30.396,
-    lng: -88.8853,
-  },
 
   {
     city: "Kansas City",
@@ -740,6 +622,7 @@ export const CITIES: City[] = [
     lat: 39.0997,
     lng: -94.5786,
   },
+
   {
     city: "St. Louis",
     state: "Missouri",
@@ -747,6 +630,7 @@ export const CITIES: City[] = [
     lat: 38.627,
     lng: -90.1994,
   },
+
   {
     city: "Springfield",
     state: "Missouri",
@@ -754,6 +638,7 @@ export const CITIES: City[] = [
     lat: 37.2089,
     lng: -93.2923,
   },
+
   {
     city: "Columbia",
     state: "Missouri",
@@ -761,6 +646,7 @@ export const CITIES: City[] = [
     lat: 38.9517,
     lng: -92.3341,
   },
+
   {
     city: "Independence",
     state: "Missouri",
@@ -776,63 +662,21 @@ export const CITIES: City[] = [
     lat: 45.7833,
     lng: -108.5007,
   },
+
   {
-    city: "Missoula",
-    state: "Montana",
-    abbr: "MT",
-    lat: 46.8787,
-    lng: -113.9966,
-  },
-  {
-    city: "Great Falls",
-    state: "Montana",
-    abbr: "MT",
-    lat: 47.5053,
-    lng: -111.3008,
-  },
-  {
-    city: "Bozeman",
-    state: "Montana",
-    abbr: "MT",
-    lat: 45.677,
-    lng: -111.0429,
-  },
-  {
-    city: "Helena",
-    state: "Montana",
-    abbr: "MT",
-    lat: 46.5884,
-    lng: -112.0245,
+    city: "Omaha",
+    state: "Nebraska",
+    abbr: "NE",
+    lat: 41.2565,
+    lng: -95.9345,
   },
 
-  { city: "Omaha", state: "Nebraska", abbr: "NE", lat: 41.2565, lng: -95.9345 },
   {
     city: "Lincoln",
     state: "Nebraska",
     abbr: "NE",
     lat: 40.8136,
     lng: -96.7026,
-  },
-  {
-    city: "Bellevue",
-    state: "Nebraska",
-    abbr: "NE",
-    lat: 41.1544,
-    lng: -95.9146,
-  },
-  {
-    city: "Grand Island",
-    state: "Nebraska",
-    abbr: "NE",
-    lat: 40.9264,
-    lng: -98.342,
-  },
-  {
-    city: "Kearney",
-    state: "Nebraska",
-    abbr: "NE",
-    lat: 40.699,
-    lng: -99.0815,
   },
 
   {
@@ -842,6 +686,7 @@ export const CITIES: City[] = [
     lat: 36.1699,
     lng: -115.1398,
   },
+
   {
     city: "Henderson",
     state: "Nevada",
@@ -849,20 +694,21 @@ export const CITIES: City[] = [
     lat: 36.0395,
     lng: -114.9817,
   },
-  { city: "Reno", state: "Nevada", abbr: "NV", lat: 39.5296, lng: -119.8138 },
+
+  {
+    city: "Reno",
+    state: "Nevada",
+    abbr: "NV",
+    lat: 39.5296,
+    lng: -119.8138,
+  },
+
   {
     city: "North Las Vegas",
     state: "Nevada",
     abbr: "NV",
     lat: 36.1989,
     lng: -115.1175,
-  },
-  {
-    city: "Carson City",
-    state: "Nevada",
-    abbr: "NV",
-    lat: 39.1638,
-    lng: -119.7674,
   },
 
   {
@@ -872,34 +718,6 @@ export const CITIES: City[] = [
     lat: 42.9956,
     lng: -71.4548,
   },
-  {
-    city: "Nashua",
-    state: "New Hampshire",
-    abbr: "NH",
-    lat: 42.7654,
-    lng: -71.4676,
-  },
-  {
-    city: "Concord",
-    state: "New Hampshire",
-    abbr: "NH",
-    lat: 43.2081,
-    lng: -71.5376,
-  },
-  {
-    city: "Dover",
-    state: "New Hampshire",
-    abbr: "NH",
-    lat: 43.1979,
-    lng: -70.8737,
-  },
-  {
-    city: "Keene",
-    state: "New Hampshire",
-    abbr: "NH",
-    lat: 42.9337,
-    lng: -72.2781,
-  },
 
   {
     city: "Newark",
@@ -908,6 +726,7 @@ export const CITIES: City[] = [
     lat: 40.7357,
     lng: -74.1724,
   },
+
   {
     city: "Jersey City",
     state: "New Jersey",
@@ -915,6 +734,7 @@ export const CITIES: City[] = [
     lat: 40.7178,
     lng: -74.0431,
   },
+
   {
     city: "Paterson",
     state: "New Jersey",
@@ -922,6 +742,7 @@ export const CITIES: City[] = [
     lat: 40.9168,
     lng: -74.1718,
   },
+
   {
     city: "Elizabeth",
     state: "New Jersey",
@@ -929,6 +750,7 @@ export const CITIES: City[] = [
     lat: 40.6639,
     lng: -74.2107,
   },
+
   {
     city: "Edison",
     state: "New Jersey",
@@ -944,6 +766,7 @@ export const CITIES: City[] = [
     lat: 35.0844,
     lng: -106.6504,
   },
+
   {
     city: "Las Cruces",
     state: "New Mexico",
@@ -951,26 +774,13 @@ export const CITIES: City[] = [
     lat: 32.3199,
     lng: -106.7637,
   },
+
   {
     city: "Rio Rancho",
     state: "New Mexico",
     abbr: "NM",
     lat: 35.2328,
     lng: -106.663,
-  },
-  {
-    city: "Santa Fe",
-    state: "New Mexico",
-    abbr: "NM",
-    lat: 35.687,
-    lng: -105.9378,
-  },
-  {
-    city: "Roswell",
-    state: "New Mexico",
-    abbr: "NM",
-    lat: 33.3943,
-    lng: -104.523,
   },
 
   {
@@ -980,6 +790,7 @@ export const CITIES: City[] = [
     lat: 40.7128,
     lng: -74.006,
   },
+
   {
     city: "Buffalo",
     state: "New York",
@@ -987,6 +798,7 @@ export const CITIES: City[] = [
     lat: 42.8864,
     lng: -78.8784,
   },
+
   {
     city: "Rochester",
     state: "New York",
@@ -994,6 +806,7 @@ export const CITIES: City[] = [
     lat: 43.1566,
     lng: -77.6088,
   },
+
   {
     city: "Yonkers",
     state: "New York",
@@ -1001,6 +814,7 @@ export const CITIES: City[] = [
     lat: 40.9312,
     lng: -73.8988,
   },
+
   {
     city: "Syracuse",
     state: "New York",
@@ -1016,6 +830,7 @@ export const CITIES: City[] = [
     lat: 35.2271,
     lng: -80.8431,
   },
+
   {
     city: "Raleigh",
     state: "North Carolina",
@@ -1023,6 +838,7 @@ export const CITIES: City[] = [
     lat: 35.7796,
     lng: -78.6382,
   },
+
   {
     city: "Greensboro",
     state: "North Carolina",
@@ -1030,19 +846,13 @@ export const CITIES: City[] = [
     lat: 36.0726,
     lng: -79.792,
   },
+
   {
     city: "Durham",
     state: "North Carolina",
     abbr: "NC",
     lat: 35.994,
     lng: -78.8986,
-  },
-  {
-    city: "Asheville",
-    state: "North Carolina",
-    abbr: "NC",
-    lat: 35.5951,
-    lng: -82.5515,
   },
 
   {
@@ -1052,40 +862,46 @@ export const CITIES: City[] = [
     lat: 46.8772,
     lng: -96.7898,
   },
+
   {
-    city: "Bismarck",
-    state: "North Dakota",
-    abbr: "ND",
-    lat: 46.8083,
-    lng: -100.7837,
-  },
-  {
-    city: "Grand Forks",
-    state: "North Dakota",
-    abbr: "ND",
-    lat: 47.9253,
-    lng: -97.0329,
-  },
-  {
-    city: "Minot",
-    state: "North Dakota",
-    abbr: "ND",
-    lat: 48.2325,
-    lng: -101.2963,
-  },
-  {
-    city: "West Fargo",
-    state: "North Dakota",
-    abbr: "ND",
-    lat: 46.874,
-    lng: -96.9004,
+    city: "Columbus",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 39.9612,
+    lng: -82.9988,
   },
 
-  { city: "Columbus", state: "Ohio", abbr: "OH", lat: 39.9612, lng: -82.9988 },
-  { city: "Cleveland", state: "Ohio", abbr: "OH", lat: 41.4993, lng: -81.6944 },
-  { city: "Cincinnati", state: "Ohio", abbr: "OH", lat: 39.1031, lng: -84.512 },
-  { city: "Toledo", state: "Ohio", abbr: "OH", lat: 41.6528, lng: -83.5379 },
-  { city: "Akron", state: "Ohio", abbr: "OH", lat: 41.0814, lng: -81.519 },
+  {
+    city: "Cleveland",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 41.4993,
+    lng: -81.6944,
+  },
+
+  {
+    city: "Cincinnati",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 39.1031,
+    lng: -84.512,
+  },
+
+  {
+    city: "Toledo",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 41.6528,
+    lng: -83.5379,
+  },
+
+  {
+    city: "Akron",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 41.0814,
+    lng: -81.519,
+  },
 
   {
     city: "Oklahoma City",
@@ -1094,7 +910,15 @@ export const CITIES: City[] = [
     lat: 35.4676,
     lng: -97.5164,
   },
-  { city: "Tulsa", state: "Oklahoma", abbr: "OK", lat: 36.154, lng: -95.9928 },
+
+  {
+    city: "Tulsa",
+    state: "Oklahoma",
+    abbr: "OK",
+    lat: 36.154,
+    lng: -95.9928,
+  },
+
   {
     city: "Norman",
     state: "Oklahoma",
@@ -1102,19 +926,13 @@ export const CITIES: City[] = [
     lat: 35.2226,
     lng: -97.4395,
   },
+
   {
     city: "Broken Arrow",
     state: "Oklahoma",
     abbr: "OK",
     lat: 36.0609,
     lng: -95.7975,
-  },
-  {
-    city: "Lawton",
-    state: "Oklahoma",
-    abbr: "OK",
-    lat: 34.6036,
-    lng: -98.3959,
   },
 
   {
@@ -1124,8 +942,23 @@ export const CITIES: City[] = [
     lat: 45.5152,
     lng: -122.6784,
   },
-  { city: "Eugene", state: "Oregon", abbr: "OR", lat: 44.0521, lng: -123.0868 },
-  { city: "Salem", state: "Oregon", abbr: "OR", lat: 44.9429, lng: -123.0351 },
+
+  {
+    city: "Eugene",
+    state: "Oregon",
+    abbr: "OR",
+    lat: 44.0521,
+    lng: -123.0868,
+  },
+
+  {
+    city: "Salem",
+    state: "Oregon",
+    abbr: "OR",
+    lat: 44.9429,
+    lng: -123.0351,
+  },
+
   {
     city: "Gresham",
     state: "Oregon",
@@ -1133,7 +966,6 @@ export const CITIES: City[] = [
     lat: 45.5001,
     lng: -122.4302,
   },
-  { city: "Bend", state: "Oregon", abbr: "OR", lat: 44.0582, lng: -121.3153 },
 
   {
     city: "Philadelphia",
@@ -1142,6 +974,7 @@ export const CITIES: City[] = [
     lat: 39.9526,
     lng: -75.1652,
   },
+
   {
     city: "Pittsburgh",
     state: "Pennsylvania",
@@ -1149,26 +982,13 @@ export const CITIES: City[] = [
     lat: 40.4406,
     lng: -79.9959,
   },
+
   {
     city: "Allentown",
     state: "Pennsylvania",
     abbr: "PA",
     lat: 40.6023,
     lng: -75.4714,
-  },
-  {
-    city: "Erie",
-    state: "Pennsylvania",
-    abbr: "PA",
-    lat: 42.1292,
-    lng: -80.0851,
-  },
-  {
-    city: "Reading",
-    state: "Pennsylvania",
-    abbr: "PA",
-    lat: 40.3356,
-    lng: -75.9269,
   },
 
   {
@@ -1178,34 +998,6 @@ export const CITIES: City[] = [
     lat: 41.824,
     lng: -71.4128,
   },
-  {
-    city: "Warwick",
-    state: "Rhode Island",
-    abbr: "RI",
-    lat: 41.7001,
-    lng: -71.4162,
-  },
-  {
-    city: "Cranston",
-    state: "Rhode Island",
-    abbr: "RI",
-    lat: 41.7798,
-    lng: -71.4373,
-  },
-  {
-    city: "Pawtucket",
-    state: "Rhode Island",
-    abbr: "RI",
-    lat: 41.8787,
-    lng: -71.3826,
-  },
-  {
-    city: "East Providence",
-    state: "Rhode Island",
-    abbr: "RI",
-    lat: 41.8137,
-    lng: -71.3701,
-  },
 
   {
     city: "Columbia",
@@ -1214,6 +1006,7 @@ export const CITIES: City[] = [
     lat: 34.0007,
     lng: -81.0348,
   },
+
   {
     city: "Charleston",
     state: "South Carolina",
@@ -1221,26 +1014,13 @@ export const CITIES: City[] = [
     lat: 32.7765,
     lng: -79.9311,
   },
+
   {
     city: "North Charleston",
     state: "South Carolina",
     abbr: "SC",
     lat: 32.8546,
     lng: -79.9748,
-  },
-  {
-    city: "Greenville",
-    state: "South Carolina",
-    abbr: "SC",
-    lat: 34.8526,
-    lng: -82.394,
-  },
-  {
-    city: "Rock Hill",
-    state: "South Carolina",
-    abbr: "SC",
-    lat: 34.9249,
-    lng: -81.0251,
   },
 
   {
@@ -1250,34 +1030,6 @@ export const CITIES: City[] = [
     lat: 43.5446,
     lng: -96.7311,
   },
-  {
-    city: "Rapid City",
-    state: "South Dakota",
-    abbr: "SD",
-    lat: 44.0805,
-    lng: -103.231,
-  },
-  {
-    city: "Aberdeen",
-    state: "South Dakota",
-    abbr: "SD",
-    lat: 45.4647,
-    lng: -98.4865,
-  },
-  {
-    city: "Brookings",
-    state: "South Dakota",
-    abbr: "SD",
-    lat: 44.3114,
-    lng: -96.7984,
-  },
-  {
-    city: "Watertown",
-    state: "South Dakota",
-    abbr: "SD",
-    lat: 44.8994,
-    lng: -97.1151,
-  },
 
   {
     city: "Nashville",
@@ -1286,6 +1038,7 @@ export const CITIES: City[] = [
     lat: 36.1627,
     lng: -86.7816,
   },
+
   {
     city: "Memphis",
     state: "Tennessee",
@@ -1293,6 +1046,7 @@ export const CITIES: City[] = [
     lat: 35.1495,
     lng: -90.049,
   },
+
   {
     city: "Knoxville",
     state: "Tennessee",
@@ -1300,6 +1054,7 @@ export const CITIES: City[] = [
     lat: 35.9606,
     lng: -83.9207,
   },
+
   {
     city: "Chattanooga",
     state: "Tennessee",
@@ -1307,6 +1062,7 @@ export const CITIES: City[] = [
     lat: 35.0456,
     lng: -85.3097,
   },
+
   {
     city: "Clarksville",
     state: "Tennessee",
@@ -1315,7 +1071,14 @@ export const CITIES: City[] = [
     lng: -87.3595,
   },
 
-  { city: "Houston", state: "Texas", abbr: "TX", lat: 29.7604, lng: -95.3698 },
+  {
+    city: "Houston",
+    state: "Texas",
+    abbr: "TX",
+    lat: 29.7604,
+    lng: -95.3698,
+  },
+
   {
     city: "San Antonio",
     state: "Texas",
@@ -1323,8 +1086,23 @@ export const CITIES: City[] = [
     lat: 29.4241,
     lng: -98.4936,
   },
-  { city: "Dallas", state: "Texas", abbr: "TX", lat: 32.7767, lng: -96.797 },
-  { city: "Austin", state: "Texas", abbr: "TX", lat: 30.2672, lng: -97.7431 },
+
+  {
+    city: "Dallas",
+    state: "Texas",
+    abbr: "TX",
+    lat: 32.7767,
+    lng: -96.797,
+  },
+
+  {
+    city: "Austin",
+    state: "Texas",
+    abbr: "TX",
+    lat: 30.2672,
+    lng: -97.7431,
+  },
+
   {
     city: "Fort Worth",
     state: "Texas",
@@ -1340,6 +1118,7 @@ export const CITIES: City[] = [
     lat: 40.7608,
     lng: -111.891,
   },
+
   {
     city: "West Valley City",
     state: "Utah",
@@ -1347,7 +1126,15 @@ export const CITIES: City[] = [
     lat: 40.6916,
     lng: -112.0011,
   },
-  { city: "Provo", state: "Utah", abbr: "UT", lat: 40.2338, lng: -111.6585 },
+
+  {
+    city: "Provo",
+    state: "Utah",
+    abbr: "UT",
+    lat: 40.2338,
+    lng: -111.6585,
+  },
+
   {
     city: "West Jordan",
     state: "Utah",
@@ -1355,30 +1142,6 @@ export const CITIES: City[] = [
     lat: 40.6097,
     lng: -111.9391,
   },
-  { city: "Orem", state: "Utah", abbr: "UT", lat: 40.2969, lng: -111.6946 },
-
-  {
-    city: "Burlington",
-    state: "Vermont",
-    abbr: "VT",
-    lat: 44.4759,
-    lng: -73.2121,
-  },
-  {
-    city: "South Burlington",
-    state: "Vermont",
-    abbr: "VT",
-    lat: 44.4669,
-    lng: -73.1709,
-  },
-  {
-    city: "Rutland",
-    state: "Vermont",
-    abbr: "VT",
-    lat: 43.6106,
-    lng: -72.9726,
-  },
-  { city: "Barre", state: "Vermont", abbr: "VT", lat: 44.197, lng: -72.502 },
   {
     city: "Montpelier",
     state: "Vermont",
@@ -1386,7 +1149,6 @@ export const CITIES: City[] = [
     lat: 44.2601,
     lng: -72.5754,
   },
-
   {
     city: "Virginia Beach",
     state: "Virginia",
@@ -1394,6 +1156,7 @@ export const CITIES: City[] = [
     lat: 36.8529,
     lng: -75.978,
   },
+
   {
     city: "Norfolk",
     state: "Virginia",
@@ -1401,6 +1164,7 @@ export const CITIES: City[] = [
     lat: 36.8508,
     lng: -76.2859,
   },
+
   {
     city: "Chesapeake",
     state: "Virginia",
@@ -1408,6 +1172,7 @@ export const CITIES: City[] = [
     lat: 36.7682,
     lng: -76.2875,
   },
+
   {
     city: "Richmond",
     state: "Virginia",
@@ -1415,6 +1180,7 @@ export const CITIES: City[] = [
     lat: 37.5407,
     lng: -77.436,
   },
+
   {
     city: "Arlington",
     state: "Virginia",
@@ -1430,6 +1196,7 @@ export const CITIES: City[] = [
     lat: 47.6062,
     lng: -122.3321,
   },
+
   {
     city: "Spokane",
     state: "Washington",
@@ -1437,6 +1204,7 @@ export const CITIES: City[] = [
     lat: 47.6588,
     lng: -117.426,
   },
+
   {
     city: "Tacoma",
     state: "Washington",
@@ -1444,6 +1212,7 @@ export const CITIES: City[] = [
     lat: 47.2529,
     lng: -122.4443,
   },
+
   {
     city: "Vancouver",
     state: "Washington",
@@ -1451,6 +1220,7 @@ export const CITIES: City[] = [
     lat: 45.6387,
     lng: -122.6615,
   },
+
   {
     city: "Bellevue",
     state: "Washington",
@@ -1460,48 +1230,13 @@ export const CITIES: City[] = [
   },
 
   {
-    city: "Charleston",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 38.3498,
-    lng: -81.6326,
-  },
-  {
-    city: "Huntington",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 38.4192,
-    lng: -82.4452,
-  },
-  {
-    city: "Morgantown",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 39.6295,
-    lng: -79.9559,
-  },
-  {
-    city: "Parkersburg",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 39.2667,
-    lng: -81.5615,
-  },
-  {
-    city: "Wheeling",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 40.0639,
-    lng: -80.7209,
-  },
-
-  {
     city: "Milwaukee",
     state: "Wisconsin",
     abbr: "WI",
     lat: 43.0389,
     lng: -87.9065,
   },
+
   {
     city: "Madison",
     state: "Wisconsin",
@@ -1509,6 +1244,7 @@ export const CITIES: City[] = [
     lat: 43.0731,
     lng: -89.4012,
   },
+
   {
     city: "Green Bay",
     state: "Wisconsin",
@@ -1523,58 +1259,7 @@ export const CITIES: City[] = [
     lat: 42.5847,
     lng: -87.8212,
   },
-  {
-    city: "Racine",
-    state: "Wisconsin",
-    abbr: "WI",
-    lat: 42.7261,
-    lng: -87.7829,
-  },
 
-  {
-    city: "Cheyenne",
-    state: "Wyoming",
-    abbr: "WY",
-    lat: 41.14,
-    lng: -104.8202,
-  },
-  {
-    city: "Casper",
-    state: "Wyoming",
-    abbr: "WY",
-    lat: 42.8501,
-    lng: -106.3252,
-  },
-  {
-    city: "Laramie",
-    state: "Wyoming",
-    abbr: "WY",
-    lat: 41.3114,
-    lng: -105.5911,
-  },
-  {
-    city: "Gillette",
-    state: "Wyoming",
-    abbr: "WY",
-    lat: 44.2911,
-    lng: -105.5022,
-  },
-  {
-    city: "Rock Springs",
-    state: "Wyoming",
-    abbr: "WY",
-    lat: 41.5875,
-    lng: -109.2029,
-  },
-
-  { city: "Auburn", state: "Alabama", abbr: "AL", lat: 32.6099, lng: -85.4808 },
-  {
-    city: "Ketchikan",
-    state: "Alaska",
-    abbr: "AK",
-    lat: 55.3422,
-    lng: -131.6461,
-  },
   {
     city: "Glendale",
     state: "Arizona",
@@ -1582,13 +1267,7 @@ export const CITIES: City[] = [
     lat: 33.5387,
     lng: -112.186,
   },
-  {
-    city: "Conway",
-    state: "Arkansas",
-    abbr: "AR",
-    lat: 35.0887,
-    lng: -92.4421,
-  },
+
   {
     city: "Sacramento",
     state: "California",
@@ -1596,6 +1275,7 @@ export const CITIES: City[] = [
     lat: 38.5816,
     lng: -121.4944,
   },
+
   {
     city: "Pueblo",
     state: "Colorado",
@@ -1603,20 +1283,7 @@ export const CITIES: City[] = [
     lat: 38.2544,
     lng: -104.6091,
   },
-  {
-    city: "Norwalk",
-    state: "Connecticut",
-    abbr: "CT",
-    lat: 41.1177,
-    lng: -73.4082,
-  },
-  {
-    city: "Rehoboth Beach",
-    state: "Delaware",
-    abbr: "DE",
-    lat: 38.7209,
-    lng: -75.076,
-  },
+
   {
     city: "St. Petersburg",
     state: "Florida",
@@ -1624,21 +1291,15 @@ export const CITIES: City[] = [
     lat: 27.7676,
     lng: -82.6403,
   },
-  { city: "Macon", state: "Georgia", abbr: "GA", lat: 32.8407, lng: -83.6324 },
+
   {
-    city: "Kapolei",
-    state: "Hawaii",
-    abbr: "HI",
-    lat: 21.3354,
-    lng: -158.0852,
+    city: "Macon",
+    state: "Georgia",
+    abbr: "GA",
+    lat: 32.8407,
+    lng: -83.6324,
   },
-  {
-    city: "Coeur d'Alene",
-    state: "Idaho",
-    abbr: "ID",
-    lat: 47.6777,
-    lng: -116.7805,
-  },
+
   {
     city: "Peoria",
     state: "Illinois",
@@ -1646,22 +1307,7 @@ export const CITIES: City[] = [
     lat: 40.6936,
     lng: -89.5889,
   },
-  { city: "Carmel", state: "Indiana", abbr: "IN", lat: 39.9784, lng: -86.118 },
-  { city: "Ames", state: "Iowa", abbr: "IA", lat: 42.0308, lng: -93.6319 },
-  {
-    city: "Manhattan",
-    state: "Kansas",
-    abbr: "KS",
-    lat: 39.1836,
-    lng: -96.5717,
-  },
-  {
-    city: "Frankfort",
-    state: "Kentucky",
-    abbr: "KY",
-    lat: 38.2009,
-    lng: -84.8733,
-  },
+
   {
     city: "Metairie",
     state: "Louisiana",
@@ -1669,20 +1315,7 @@ export const CITIES: City[] = [
     lat: 29.9841,
     lng: -90.1529,
   },
-  {
-    city: "Bar Harbor",
-    state: "Maine",
-    abbr: "ME",
-    lat: 44.3876,
-    lng: -68.2039,
-  },
-  {
-    city: "Silver Spring",
-    state: "Maryland",
-    abbr: "MD",
-    lat: 38.9907,
-    lng: -77.0261,
-  },
+
   {
     city: "New Bedford",
     state: "Massachusetts",
@@ -1690,6 +1323,7 @@ export const CITIES: City[] = [
     lat: 41.6362,
     lng: -70.9342,
   },
+
   {
     city: "Lansing",
     state: "Michigan",
@@ -1697,56 +1331,13 @@ export const CITIES: City[] = [
     lat: 42.7325,
     lng: -84.5555,
   },
+
   {
-    city: "Saint Cloud",
-    state: "Minnesota",
-    abbr: "MN",
-    lat: 45.5579,
-    lng: -94.1632,
-  },
-  {
-    city: "Tupelo",
-    state: "Mississippi",
-    abbr: "MS",
-    lat: 34.2576,
-    lng: -88.7034,
-  },
-  {
-    city: "St. Charles",
-    state: "Missouri",
-    abbr: "MO",
-    lat: 38.7881,
-    lng: -90.4974,
-  },
-  {
-    city: "Kalispell",
-    state: "Montana",
-    abbr: "MT",
-    lat: 48.1958,
-    lng: -114.3129,
-  },
-  { city: "Norfolk", state: "Nebraska", abbr: "NE", lat: 42.032, lng: -97.417 },
-  { city: "Sparks", state: "Nevada", abbr: "NV", lat: 39.5349, lng: -119.7527 },
-  {
-    city: "Portsmouth",
-    state: "New Hampshire",
-    abbr: "NH",
-    lat: 43.0718,
-    lng: -70.7626,
-  },
-  {
-    city: "Trenton",
-    state: "New Jersey",
-    abbr: "NJ",
-    lat: 40.2206,
-    lng: -74.7597,
-  },
-  {
-    city: "Farmington",
-    state: "New Mexico",
-    abbr: "NM",
-    lat: 36.7281,
-    lng: -108.2187,
+    city: "Sparks",
+    state: "Nevada",
+    abbr: "NV",
+    lat: 39.5349,
+    lng: -119.7527,
   },
   {
     city: "Albany",
@@ -1756,33 +1347,26 @@ export const CITIES: City[] = [
     lng: -73.7562,
   },
   {
+    city: "Portsmouth",
+    state: "New Hampshire",
+    abbr: "NH",
+    lat: 43.0718,
+    lng: -70.7626,
+  },
+  {
     city: "Winston-Salem",
     state: "North Carolina",
     abbr: "NC",
     lat: 36.0999,
     lng: -80.2442,
   },
+
   {
-    city: "Dickinson",
-    state: "North Dakota",
-    abbr: "ND",
-    lat: 46.8792,
-    lng: -102.7896,
-  },
-  { city: "Dayton", state: "Ohio", abbr: "OH", lat: 39.7589, lng: -84.1916 },
-  {
-    city: "Edmond",
-    state: "Oklahoma",
-    abbr: "OK",
-    lat: 35.6528,
-    lng: -97.4781,
-  },
-  {
-    city: "Medford",
-    state: "Oregon",
-    abbr: "OR",
-    lat: 42.3265,
-    lng: -122.8756,
+    city: "Dayton",
+    state: "Ohio",
+    abbr: "OH",
+    lat: 39.7589,
+    lng: -84.1916,
   },
   {
     city: "Scranton",
@@ -1819,8 +1403,14 @@ export const CITIES: City[] = [
     lat: 35.8456,
     lng: -86.3903,
   },
-  { city: "El Paso", state: "Texas", abbr: "TX", lat: 31.7619, lng: -106.485 },
-  { city: "Sandy", state: "Utah", abbr: "UT", lat: 40.5649, lng: -111.8389 },
+
+  {
+    city: "El Paso",
+    state: "Texas",
+    abbr: "TX",
+    lat: 31.7619,
+    lng: -106.485,
+  },
   {
     city: "Brattleboro",
     state: "Vermont",
@@ -1834,27 +1424,6 @@ export const CITIES: City[] = [
     abbr: "VA",
     lat: 38.8048,
     lng: -77.0469,
-  },
-  {
-    city: "Olympia",
-    state: "Washington",
-    abbr: "WA",
-    lat: 47.0379,
-    lng: -122.9007,
-  },
-  {
-    city: "Beckley",
-    state: "West Virginia",
-    abbr: "WV",
-    lat: 37.7782,
-    lng: -81.1882,
-  },
-  {
-    city: "Eau Claire",
-    state: "Wisconsin",
-    abbr: "WI",
-    lat: 44.8113,
-    lng: -91.4985,
   },
   {
     city: "Jackson",
