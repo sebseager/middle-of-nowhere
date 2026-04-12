@@ -18,7 +18,7 @@
 
 <div class="app-shell">
   <header class="topbar">
-    <h1>UNZOOMED</h1>
+    <h1>MIDDLE OF NOWHERE</h1>
     <p>Guess the mystery U.S. city in 6 tries.</p>
   </header>
 
