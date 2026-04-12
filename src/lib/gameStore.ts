@@ -7,6 +7,7 @@ export const ZOOM_STEPS = [12, 10, 8, 7, 6, 4] as const;
 export interface GuessResult {
   input: string;
   correct: boolean;
+  milesAway: number;
 }
 
 export interface GameState {
@@ -33,6 +34,24 @@ CITIES.forEach((city: City, index: number) => {
 
 const randomCity = (): City =>
   CITIES[Math.floor(Math.random() * CITIES.length)];
+
+const EARTH_RADIUS_MI = 3958.8;
+
+const toRadians = (degrees: number): number => (degrees * Math.PI) / 180;
+
+const distanceMiles = (from: City, to: City): number => {
+  const dLat = toRadians(to.lat - from.lat);
+  const dLng = toRadians(to.lng - from.lng);
+  const fromLat = toRadians(from.lat);
+  const toLat = toRadians(to.lat);
+
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(fromLat) * Math.cos(toLat) * Math.sin(dLng / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+  return Math.round(EARTH_RADIUS_MI * c);
+};
 
 const createInitialState = (): GameState => ({
   target: randomCity(),
@@ -78,7 +97,12 @@ function createGameStore() {
       guessedCity.city === state.target.city &&
       guessedCity.abbr === state.target.abbr;
 
-    const nextGuesses = [...state.guesses, { input: inputLabel, correct }];
+    const milesAway = correct ? 0 : distanceMiles(guessedCity, state.target);
+
+    const nextGuesses = [
+      ...state.guesses,
+      { input: inputLabel, correct, milesAway },
+    ];
 
     let status: GameState["status"] = state.status;
     let currentZoomLevel = state.currentZoomLevel;

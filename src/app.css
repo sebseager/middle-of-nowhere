@@ -168,7 +168,7 @@ body,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .slot {
@@ -181,26 +181,51 @@ body,
   gap: 6px;
   padding: 0 10px;
   font-size: 0.76rem;
-  border: 1px solid #ddd;
+  border: 0;
   white-space: nowrap;
 }
 
+.slot-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
 .slot-empty {
+  display: block;
   border-style: dashed;
+  border: 1px dashed #ddd;
   color: #9e9e9e;
   background: #faf9f5;
 }
 
-.slot-wrong {
-  background: #fde8ea;
-  border-color: #f3b6bc;
-  color: #8d1c2b;
+.slot-far {
+  background: #c62828;
+  color: #fff;
+}
+
+.slot-near {
+  background: #d9822b;
+  color: #fff;
 }
 
 .slot-correct {
-  background: #dff2e7;
-  border-color: #96d0b1;
-  color: #1e5a41;
+  background: #2e7d32;
+  color: #fff;
+}
+
+.distance-box {
+  min-width: 110px;
+  max-width: 170px;
+  border-radius: 8px;
+  border: 1px solid #ddd8ce;
+  background: #fffdf8;
+  color: #4d473a;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  padding: 5px 8px;
+  text-align: center;
 }
 
 .result-overlay {
