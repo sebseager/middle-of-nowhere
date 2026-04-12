@@ -1,4 +1,3 @@
-import { get, writable } from "svelte/store";
 import type { City } from "./cities";
 import { CITIES } from "./cities";
 
@@ -22,14 +21,19 @@ export interface SubmitResult {
   reason?: "invalid" | "duplicate";
 }
 
+export interface SubmitGuessOutput {
+  state: GameState;
+  result: SubmitResult;
+}
+
 const cityIndex = new Map<string, number>();
 
-const normalize = (value: string): string =>
+export const normalizeInput = (value: string): string =>
   value.toLowerCase().replace(/\./g, "").replace(/\s+/g, " ").trim();
 
 CITIES.forEach((city: City, index: number) => {
-  cityIndex.set(normalize(`${city.city}, ${city.abbr}`), index);
-  cityIndex.set(normalize(`${city.city}, ${city.state}`), index);
+  cityIndex.set(normalizeInput(`${city.city}, ${city.abbr}`), index);
+  cityIndex.set(normalizeInput(`${city.city}, ${city.state}`), index);
 });
 
 const randomCity = (): City =>
@@ -39,7 +43,7 @@ const EARTH_RADIUS_MI = 3958.8;
 
 const toRadians = (degrees: number): number => (degrees * Math.PI) / 180;
 
-const distanceMiles = (from: City, to: City): number => {
+export const distanceMiles = (from: City, to: City): number => {
   const dLat = toRadians(to.lat - from.lat);
   const dLng = toRadians(to.lng - from.lng);
   const fromLat = toRadians(from.lat);
@@ -53,84 +57,82 @@ const distanceMiles = (from: City, to: City): number => {
   return Math.round(EARTH_RADIUS_MI * c);
 };
 
-const createInitialState = (): GameState => ({
+export const createInitialState = (): GameState => ({
   target: randomCity(),
   guesses: [],
   status: "playing",
   currentZoomLevel: 0,
 });
 
-function createGameStore() {
-  const store = writable<GameState>(createInitialState());
+export const submitGuess = (
+  state: GameState,
+  input: string,
+): SubmitGuessOutput => {
+  const value = input.trim();
+  if (!value) {
+    return {
+      state,
+      result: { accepted: false, reason: "invalid" },
+    };
+  }
 
-  const startNewRound = () => {
-    store.set(createInitialState());
-  };
+  const normalizedInput = normalizeInput(value);
+  const cityIdx = cityIndex.get(normalizedInput);
+  if (cityIdx === undefined) {
+    return {
+      state,
+      result: { accepted: false, reason: "invalid" },
+    };
+  }
 
-  const submitGuess = (input: string): SubmitResult => {
-    const value = input.trim();
-    if (!value) {
-      return { accepted: false, reason: "invalid" };
-    }
+  if (state.status !== "playing") {
+    return {
+      state,
+      result: { accepted: false, reason: "invalid" },
+    };
+  }
 
-    const normalizedInput = normalize(value);
-    const cityIdx = cityIndex.get(normalizedInput);
-    if (cityIdx === undefined) {
-      return { accepted: false, reason: "invalid" };
-    }
+  const alreadyGuessed = state.guesses.some(
+    (guess: GuessResult) => normalizeInput(guess.input) === normalizedInput,
+  );
+  if (alreadyGuessed) {
+    return {
+      state,
+      result: { accepted: false, reason: "duplicate" },
+    };
+  }
 
-    const state = get(store);
-    if (state.status !== "playing") {
-      return { accepted: false, reason: "invalid" };
-    }
+  const guessedCity = CITIES[cityIdx];
+  const inputLabel = `${guessedCity.city}, ${guessedCity.abbr}`;
+  const correct =
+    guessedCity.city === state.target.city &&
+    guessedCity.abbr === state.target.abbr;
+  const milesAway = correct ? 0 : distanceMiles(guessedCity, state.target);
 
-    const alreadyGuessed = state.guesses.some(
-      (g: GuessResult) => normalize(g.input) === normalizedInput,
-    );
-    if (alreadyGuessed) {
-      return { accepted: false, reason: "duplicate" };
-    }
+  const nextGuesses = [
+    ...state.guesses,
+    { input: inputLabel, correct, milesAway },
+  ];
 
-    const guessedCity = CITIES[cityIdx];
-    const inputLabel = `${guessedCity.city}, ${guessedCity.abbr}`;
-    const correct =
-      guessedCity.city === state.target.city &&
-      guessedCity.abbr === state.target.abbr;
+  let status: GameState["status"] = state.status;
+  let currentZoomLevel = state.currentZoomLevel;
 
-    const milesAway = correct ? 0 : distanceMiles(guessedCity, state.target);
+  if (correct) {
+    status = "won";
+  } else if (nextGuesses.length >= 6) {
+    status = "lost";
+    currentZoomLevel = 5;
+  } else {
+    currentZoomLevel = Math.min(state.currentZoomLevel + 1, 5);
+  }
 
-    const nextGuesses = [
-      ...state.guesses,
-      { input: inputLabel, correct, milesAway },
-    ];
-
-    let status: GameState["status"] = state.status;
-    let currentZoomLevel = state.currentZoomLevel;
-
-    if (correct) {
-      status = "won";
-    } else if (nextGuesses.length >= 6) {
-      status = "lost";
-      currentZoomLevel = 5;
-    } else {
-      currentZoomLevel = Math.min(state.currentZoomLevel + 1, 5);
-    }
-
-    store.set({
+  return {
+    state: {
       ...state,
       guesses: nextGuesses,
       status,
       currentZoomLevel,
-    });
-
-    return { accepted: true };
+    },
+    result: { accepted: true },
   };
-
-  return {
-    subscribe: store.subscribe,
-    startNewRound,
-    submitGuess,
-  };
-}
-
-export const gameStore = createGameStore();
+};
