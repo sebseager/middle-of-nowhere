@@ -17,6 +17,6 @@
     {:else}
       <p>The city was <strong>{target.city}, {target.state}</strong>.</p>
     {/if}
-    <button class="new-round-btn" on:click={startNewRound}>New Round</button>
+    <button class="new-round-btn" onclick={startNewRound}>New Round</button>
   </div>
 {/if}

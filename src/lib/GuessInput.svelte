@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
+  import CityDropdown from './CityDropdown.svelte';
   import type { SubmitResult } from './gameStore';
 
   interface Props {
@@ -11,23 +11,15 @@
 
   let { labels, status, submitGuess, roundKey }: Props = $props();
 
-  const dispatch = createEventDispatcher<{ submitted: void }>();
-
   let value = $state('');
   let error = $state('');
-  let inputEl: HTMLInputElement | null = null;
-
-  let filteredLabels = $derived.by(() => {
-    const q = value.trim().toLowerCase();
-    if (!q) return labels;
-    return labels.filter((label) => label.toLowerCase().includes(q));
-  });
+  let dropdown: CityDropdown;
 
   $effect(() => {
     roundKey;
     value = '';
     error = '';
-    inputEl?.focus();
+    dropdown?.focus();
   });
 
   const onSubmit = () => {
@@ -41,27 +33,17 @@
 
     error = '';
     value = '';
-    inputEl?.blur();
-    dispatch('submitted');
+    dropdown?.blur();
   };
 </script>
 
-<form class="guess-form" on:submit|preventDefault={onSubmit}>
-  <input
-    bind:this={inputEl}
+<form class="guess-form" onsubmit={(e) => { e.preventDefault(); onSubmit(); }}>
+  <CityDropdown
+    bind:this={dropdown}
     bind:value
-    class="guess-input"
-    type="text"
-    list="city-options"
-    placeholder="Guess a city, e.g. Albany, NY"
+    {labels}
     disabled={status !== 'playing'}
-    autocomplete="off"
   />
-  <datalist id="city-options">
-    {#each filteredLabels as label}
-      <option value={label}></option>
-    {/each}
-  </datalist>
   <button class="guess-btn" type="submit" disabled={status !== 'playing'}>Guess</button>
 </form>
 {#if error}

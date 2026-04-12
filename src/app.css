@@ -4,8 +4,7 @@
   --text: #1a1a2e;
   --accent: #e63946;
   --ok: #2d6a4f;
-  --header-h: 64px;
-  --panel-h: 146px;
+  --map-size: 400px;
 }
 
 * {
@@ -31,10 +30,11 @@ body,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .topbar {
-  height: var(--header-h);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,39 +56,89 @@ body,
   opacity: 0.8;
 }
 
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
 .map-wrap {
   position: relative;
-  height: calc(100vh - var(--header-h) - var(--panel-h));
-  min-height: 280px;
+  width: var(--map-size);
+  height: var(--map-size);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .map {
-  height: 100%;
   width: 100%;
-}
-
-.bottom-panel {
-  height: var(--panel-h);
-  background: var(--panel);
-  border-top: 1px solid #ded9cf;
-  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.05);
-  padding: 10px 12px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  height: 100%;
 }
 
 .guess-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   gap: 8px;
+  width: 100%;
+  max-width: var(--map-size);
 }
 
-.guess-input {
+.dropdown-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.dropdown-input {
   width: 100%;
   border: 1px solid #cfc9bc;
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 0.95rem;
+  background: var(--panel);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border: 1px solid #cfc9bc;
+  border-radius: 10px;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.dropdown-item:hover,
+.dropdown-item.highlighted {
+  background: #f0ede6;
+}
+
+.dropdown-item:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 10px 10px;
 }
 
 .guess-btn,
@@ -108,27 +158,29 @@ body,
 }
 
 .input-error {
-  margin: 6px 2px 0;
+  margin: 2px 2px 0;
   color: var(--accent);
   font-size: 0.82rem;
+  text-align: center;
 }
 
 .guess-slots {
-  margin-top: 10px;
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 
 .slot {
-  min-width: 124px;
-  height: 36px;
+  min-width: 110px;
+  height: 32px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 0 12px;
-  font-size: 0.78rem;
+  gap: 6px;
+  padding: 0 10px;
+  font-size: 0.76rem;
   border: 1px solid #ddd;
   white-space: nowrap;
 }
@@ -165,11 +217,12 @@ body,
   justify-content: space-between;
   gap: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 500;
 }
 
 .result-overlay p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .result-win p {
@@ -188,10 +241,9 @@ body,
   content: "😔 ";
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   :root {
-    --header-h: 68px;
-    --panel-h: 170px;
+    --map-size: min(90vw, 360px);
   }
 
   .topbar {
