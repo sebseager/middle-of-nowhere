@@ -67,10 +67,29 @@ export interface CheckedTileLayerHandle {
   layer: TileLayer;
 }
 
+/**
+ * Slightly overlapping neighboring tiles helps hide anti-aliased seams
+ * that can appear between tiles in some browser/zoom combinations.
+ */
+class OverlapTileLayer extends TileLayer {
+  override createTile(
+    ...args: Parameters<TileLayer["createTile"]>
+  ): ReturnType<TileLayer["createTile"]> {
+    const tile = super.createTile(...args);
+    const tileSize = this.getTileSize();
+
+    // Slightly overlap neighboring tiles to hide anti-aliased seams.
+    tile.style.width = `${tileSize.x + 1}px`;
+    tile.style.height = `${tileSize.y + 1}px`;
+
+    return tile;
+  }
+}
+
 export function createCheckedTileLayer(
   url: string,
   options: TileLayerOptions,
 ): CheckedTileLayerHandle {
-  const layer = new TileLayer(url, options);
+  const layer = new OverlapTileLayer(url, options);
   return { layer };
 }

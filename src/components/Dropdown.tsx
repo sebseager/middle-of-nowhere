@@ -125,7 +125,7 @@ const Dropdown = forwardRef<DropdownHandle, DropdownProps>(
           data-1p-ignore="true"
           data-lpignore="true"
           data-bwignore="true"
-          className="w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none transition placeholder:text-stone-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-200 disabled:cursor-not-allowed disabled:bg-stone-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-rose-500 dark:focus:ring-rose-900 dark:disabled:bg-slate-900"
+          className="w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base text-slate-900 outline-none transition placeholder:text-stone-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-200 disabled:cursor-not-allowed disabled:bg-stone-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-rose-500 dark:focus:ring-rose-900 dark:disabled:bg-slate-900"
           onChange={(event) => {
             onChange(event.target.value);
             setOpen(true);
