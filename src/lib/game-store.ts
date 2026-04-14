@@ -1,12 +1,15 @@
 import type { City } from "./cities";
-import { CITIES } from "./cities";
+import { ALL_CITIES, cityLabel } from "./cities";
 
-export const ZOOM_STEPS = [12, 10, 8, 7, 6, 4] as const;
+export const ZOOM_STEPS = [16, 14, 12, 10, 8, 6] as const;
 
 export interface GuessResult {
   input: string;
+  cityKey?: string;
   correct: boolean;
   milesAway: number;
+  lat: number;
+  lng: number;
 }
 
 export interface GameState {
@@ -26,18 +29,21 @@ export interface SubmitGuessOutput {
   result: SubmitResult;
 }
 
-const cityIndex = new Map<string, number>();
-
 export const normalizeInput = (value: string): string =>
   value.toLowerCase().replace(/\./g, "").replace(/\s+/g, " ").trim();
 
-CITIES.forEach((city: City, index: number) => {
+const toCityKey = (city: City): string =>
+  `${normalizeInput(city.city)}|${normalizeInput(city.abbr)}`;
+
+// Build an index for the full city list (used for guess validation).
+// We index ALL cities so any valid city name is accepted regardless of filter.
+const cityIndex = new Map<string, number>();
+ALL_CITIES.forEach((city: City, index: number) => {
+  cityIndex.set(normalizeInput(cityLabel(city)), index);
   cityIndex.set(normalizeInput(`${city.city}, ${city.abbr}`), index);
   cityIndex.set(normalizeInput(`${city.city}, ${city.state}`), index);
+  cityIndex.set(normalizeInput(`${city.city}, ${city.country}`), index);
 });
-
-const randomCity = (): City =>
-  CITIES[Math.floor(Math.random() * CITIES.length)];
 
 const EARTH_RADIUS_MI = 3958.8;
 
@@ -57,8 +63,8 @@ export const distanceMiles = (from: City, to: City): number => {
   return Math.round(EARTH_RADIUS_MI * c);
 };
 
-export const createInitialState = (): GameState => ({
-  target: randomCity(),
+export const createInitialState = (cities: City[]): GameState => ({
+  target: cities[Math.floor(Math.random() * cities.length)],
   guesses: [],
   status: "playing",
   currentZoomLevel: 0,
@@ -92,8 +98,15 @@ export const submitGuess = (
     };
   }
 
+  const guessedCity = ALL_CITIES[cityIdx];
+  const guessedCityKey = toCityKey(guessedCity);
+
   const alreadyGuessed = state.guesses.some(
-    (guess: GuessResult) => normalizeInput(guess.input) === normalizedInput,
+    (guess: GuessResult) =>
+      guess.cityKey === guessedCityKey ||
+      normalizeInput(guess.input) === normalizeInput(cityLabel(guessedCity)) ||
+      normalizeInput(guess.input) ===
+        normalizeInput(`${guessedCity.city}, ${guessedCity.abbr}`),
   );
   if (alreadyGuessed) {
     return {
@@ -102,8 +115,7 @@ export const submitGuess = (
     };
   }
 
-  const guessedCity = CITIES[cityIdx];
-  const inputLabel = `${guessedCity.city}, ${guessedCity.abbr}`;
+  const inputLabel = cityLabel(guessedCity);
   const correct =
     guessedCity.city === state.target.city &&
     guessedCity.abbr === state.target.abbr;
@@ -111,7 +123,14 @@ export const submitGuess = (
 
   const nextGuesses = [
     ...state.guesses,
-    { input: inputLabel, correct, milesAway },
+    {
+      input: inputLabel,
+      cityKey: guessedCityKey,
+      correct,
+      milesAway,
+      lat: guessedCity.lat,
+      lng: guessedCity.lng,
+    },
   ];
 
   let status: GameState["status"] = state.status;

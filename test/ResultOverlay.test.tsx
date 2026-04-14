@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { CITIES } from "../src/lib/cities";
+import { CITIES, cityLabel } from "../src/lib/cities";
 import ResultOverlay from "../src/lib/ResultOverlay";
 
 const target = CITIES[0];
@@ -31,8 +31,7 @@ describe("ResultOverlay", () => {
     expect(
       screen.getByText(
         (_, element) =>
-          element?.textContent ===
-          `Correct! It was ${target.city}, ${target.state}.`,
+          element?.textContent === `Correct! It was ${cityLabel(target)}.`,
       ),
     ).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: "New Round" }));

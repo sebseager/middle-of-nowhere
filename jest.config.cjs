@@ -16,6 +16,7 @@ module.exports = {
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
     "\\.(css|less|scss)$": "<rootDir>/test/styleMock.ts",
+    "cities\\.json$": "<rootDir>/test/citiesMock.ts",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
 };

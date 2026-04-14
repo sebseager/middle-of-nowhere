@@ -7,7 +7,7 @@ describe("GuessInput", () => {
 
     render(
       <GuessInput
-        labels={["Phoenix, AZ", "Tucson, AZ"]}
+        labels={["Phoenix, Arizona", "Tucson, Arizona"]}
         status="playing"
         submitGuess={submitGuess}
         roundKey="round-1"
@@ -17,10 +17,10 @@ describe("GuessInput", () => {
     const input = screen.getByRole("combobox");
     const button = screen.getByRole("button", { name: "Guess" });
 
-    fireEvent.change(input, { target: { value: "Phoenix, AZ" } });
+    fireEvent.change(input, { target: { value: "Phoenix, Arizona" } });
     fireEvent.click(button);
 
-    expect(submitGuess).toHaveBeenCalledWith("Phoenix, AZ");
+    expect(submitGuess).toHaveBeenCalledWith("Phoenix, Arizona");
     expect(input).toHaveValue("");
     expect(screen.queryByText("Already guessed.")).not.toBeInTheDocument();
   });
@@ -33,7 +33,7 @@ describe("GuessInput", () => {
 
     render(
       <GuessInput
-        labels={["Phoenix, AZ"]}
+        labels={["Phoenix, Arizona"]}
         status="playing"
         submitGuess={submitGuess}
         roundKey="round-1"
@@ -42,7 +42,7 @@ describe("GuessInput", () => {
 
     const input = screen.getByRole("combobox");
 
-    fireEvent.change(input, { target: { value: "Phoenix, AZ" } });
+    fireEvent.change(input, { target: { value: "Phoenix, Arizona" } });
     fireEvent.submit(
       screen
         .getByRole("button", { name: "Guess" })
@@ -50,7 +50,7 @@ describe("GuessInput", () => {
     );
 
     expect(screen.getByText("Already guessed.")).toBeInTheDocument();
-    expect(input).toHaveValue("Phoenix, AZ");
+    expect(input).toHaveValue("Phoenix, Arizona");
   });
 
   it("disables controls when game is not playing", () => {
@@ -58,7 +58,7 @@ describe("GuessInput", () => {
 
     render(
       <GuessInput
-        labels={["Phoenix, AZ"]}
+        labels={["Phoenix, Arizona"]}
         status="won"
         submitGuess={submitGuess}
         roundKey="round-1"
@@ -67,5 +67,33 @@ describe("GuessInput", () => {
 
     expect(screen.getByRole("combobox")).toBeDisabled();
     expect(screen.getByRole("button", { name: "Guess" })).toBeDisabled();
+  });
+
+  it("shows suggestions only after three characters and does not cap results", () => {
+    const submitGuess = jest.fn(() => ({ accepted: true as const }));
+    const labels = [
+      "Belfast, Northern Ireland",
+      "Belgrade, Serbia",
+      "Belmopan, Belize",
+      "Belo Horizonte, Brazil",
+    ];
+
+    render(
+      <GuessInput
+        labels={labels}
+        status="playing"
+        submitGuess={submitGuess}
+        roundKey="round-1"
+      />,
+    );
+
+    const input = screen.getByRole("combobox");
+
+    fireEvent.change(input, { target: { value: "be" } });
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+
+    fireEvent.change(input, { target: { value: "bel" } });
+    expect(screen.getByRole("listbox")).toBeInTheDocument();
+    expect(screen.getAllByRole("option")).toHaveLength(labels.length);
   });
 });

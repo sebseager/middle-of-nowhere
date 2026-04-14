@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import PrimaryButton from "../components/PrimaryButton";
 import CityDropdown, { type CityDropdownHandle } from "./CityDropdown";
-import type { SubmitResult } from "./gameStore";
+import type { SubmitResult } from "./game-store";
 
 interface GuessInputProps {
   labels: string[];
@@ -49,7 +50,10 @@ function GuessInput({
 
   return (
     <>
-      <form className="guess-form" onSubmit={onSubmit}>
+      <form
+        className="relative z-40 flex w-full min-w-0 items-start gap-2"
+        onSubmit={onSubmit}
+      >
         <CityDropdown
           ref={dropdownRef}
           labels={labels}
@@ -57,15 +61,19 @@ function GuessInput({
           onChange={setValue}
           disabled={status !== "playing"}
         />
-        <button
-          className="guess-btn"
+        <PrimaryButton
+          className="py-2.5"
           type="submit"
           disabled={status !== "playing"}
         >
           Guess
-        </button>
+        </PrimaryButton>
       </form>
-      {error && <p className="input-error">{error}</p>}
+      {error && (
+        <p className="mt-1 text-center text-xs font-semibold text-rose-600 dark:text-rose-400">
+          {error}
+        </p>
+      )}
     </>
   );
 }

@@ -1,12 +1,12 @@
-import { CITIES } from "../src/lib/cities";
+import { ALL_CITIES } from "../src/lib/cities";
 import {
   submitGuess,
   type GameState,
   type SubmitGuessOutput,
-} from "../src/lib/gameStore";
+} from "../src/lib/game-store";
 
 const pickCity = (city: string, abbr: string) => {
-  const result = CITIES.find(
+  const result = ALL_CITIES.find(
     (candidate) => candidate.city === city && candidate.abbr === abbr,
   );
   if (!result) {
@@ -38,7 +38,7 @@ describe("gameStore submitGuess", () => {
     expect(nextState.status).toBe("won");
     expect(nextState.guesses).toHaveLength(1);
     expect(nextState.guesses[0]).toMatchObject({
-      input: "Phoenix, AZ",
+      input: "Phoenix, Arizona",
       correct: true,
       milesAway: 0,
     });
@@ -53,7 +53,7 @@ describe("gameStore submitGuess", () => {
     const firstAccepted = submit(initialState, "Tucson, AZ");
     expect(firstAccepted.result).toEqual({ accepted: true });
 
-    const duplicate = submit(firstAccepted.state, "Tucson, AZ");
+    const duplicate = submit(firstAccepted.state, "Tucson, Arizona");
     expect(duplicate.result).toEqual({ accepted: false, reason: "duplicate" });
   });
 
